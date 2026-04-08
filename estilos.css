@@ -5,25 +5,17 @@
 
 * {
     font-family: "Montserrat", sans-serif;
-}
-
-main {
-    background-color:antiquewhite;
-}
-
-.botonera {
-    font-family: "Montserrat", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 700;
-        font-style: normal;
-        text-align: center;
-        text-decoration: none;
-}
-
-a {
+    list-style: none;
     text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+header {
+    padding: 25px;
+    margin: 0px 0px 25px 0px
+}
 
 header p {
     font-size: 2.5rem;
@@ -33,51 +25,169 @@ header p {
         font-weight: 300;
         font-style: normal;
         text-align: center;
+    padding: 0px 0px 10px 0px;
+    margin: 0px 0px 20px 0px;
 }
 
-/* aplicaciones */
+#cabecera {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagen {
+    width: 100%;
+    height: auto;
+    max-width: 720px;
+}
+
+main {
+    background-color:antiquewhite;
+    padding: 50px;
+}
+
+.botonera {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+    height: 50px;
+    padding: 15px;
+}
+
+.botonera a {
+    height: 15PX;
+    min-width: fit-content;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: lightpink;
+    color: white;
+    line-height: 2.6rem;
+}
+
+.botonera a:hover {
+    background-color: lightpink;
+    color: hotpink;
+}
+
+.botonera a:active {
+    background-color: rgb(255, 213, 151);
+    color: hotpink;
+}
+
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: rgb(255, 182, 47);
+    font-size: 3rem;
+        font-family: "Walter Turncoat", cursive;
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
+    min-height: 20vh;
+    max-height: 80vh;
+    padding: 10px;
+    margin: 20px 20px 40px 20px;
+}
+
+#hero img {
+    max-width: 406px;
+}
+
+#todo {
+    display:flex;
+    justify-content: space-around;
+    text-align: left;
+}
+
+#derecha div {
+    padding: 15px 15px 15px 0px;
+}
+
+#about p {
+    max-width: 350px;
+    text-align:left;
+    height: fit-content;
+}
+
+section {
+    padding: 25px;
+}
+
+footer {
+    height: fit-content;
+    padding: 20px;
+}
+
+footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px;
+}
 
 p {
     text-wrap-style: balance;
+    line-height: 1.5;
+    padding: 5px 0px 5px 0px;
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.8rem;
 }
 
 ul {
     line-height: 2rem;
     list-style: none;
 }
+.lista li {
+    display: flex;
+    justify-content:left;
+}
 
 h1 {
     color: rgb(255, 182, 47);
     font-size: 3rem;
-font-family: "Bellota", system-ui;
-    font-weight: 700;
-    font-style: normal;
-    text-align: center;
+    font-family: "Walter Turncoat", cursive;
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
+    padding: 20px;
 }
 
 h2 {
     color: rgb(255, 77, 145);
     font-size: 2rem;
-    font-family: "Bellota", sans-serif;
+    font-family: "Walter Turncoat", cursive;
         font-optical-sizing: auto;
-        font-weight: 700;
+        font-weight: 400;
         font-style: normal;
 }
 
 h3 {
     color: rgb(0, 0, 0);
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-family: "Montserrat", sans-serif;
         font-optical-sizing: auto;
         font-weight: 500;
         font-style: normal;
+    padding: 0px 0px 5px 0px;
 }
 
 h4 {
     color: rgb(66, 66, 66);
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-family: "Montserrat", sans-serif;
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
+    padding: 0px 0px 5px 0px;
 }
