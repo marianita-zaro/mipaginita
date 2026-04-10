@@ -14,7 +14,7 @@
 
 header {
     padding: 25px;
-    margin: 0px 0px 25px 0px
+    margin: 0px;
 }
 
 header p {
@@ -33,6 +33,7 @@ header p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color:rgb(255, 242, 205);
 }
 
 .imagen {
@@ -42,7 +43,7 @@ header p {
 }
 
 main {
-    background-color:antiquewhite;
+    background-color:floralwhite;
     padding: 50px;
 }
 
@@ -109,6 +110,11 @@ main {
     padding: 15px 15px 15px 0px;
 }
 
+#about {
+    background-color:rgb(255, 242, 205);
+    border-radius: 30px;
+}
+
 #about p {
     max-width: 350px;
     text-align:left;
@@ -122,6 +128,7 @@ section {
 footer {
     height: fit-content;
     padding: 20px;
+    background-color: lightpink;
 }
 
 footer ul {
@@ -146,8 +153,14 @@ footer p {
 
 ul {
     line-height: 2rem;
-    list-style: none;
 }
+
+.skills {
+    margin: 20px;
+    background-color:rgb(255, 242, 242);
+    border-radius: 30px ;
+}
+
 .lista li {
     display: flex;
     justify-content:left;
