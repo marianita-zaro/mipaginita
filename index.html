@@ -5,42 +5,49 @@
     <meta charset="utf-8" />
     <title>La página de Mariana Banana</title>
     <link href="estilos.css" rel="stylesheet" type="text/css">
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Walter+Turncoat&display=swap');
-</style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Walter+Turncoat&display=swap');
+    </style>
 </head>
 
 <body>
-    <header id="cabecera">
-        <img class="imagen" src="img/GIF.gif" alt="Logo Mariana Banana">
-        <p>Ilustración & Diseño Gráfico</p>
-        <nav class="botonera">
-            <a href="#">Inicio</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Contacto</a>
-            <a href="#">Blog</a>
-        </nav>
+    <header>
+        <div id="logo">
+            <img src="img/Logo.png" alt="logo">
+            <nav id="botonera">
+                <a href="#">Inicio</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Contacto</a>
+                <a href="#">Blog</a>
+            </nav>
+        </div>
+        <div id="banana">
+            <img id="gif" src="img/GIF.gif" alt="Logo Mariana Banana">
+            <p>Ilustración & Diseño Gráfico</p>
+        </div>
     </header>
     <main>
         <section id="hero">
-            <img class="imagen" src="img/Avatar.png">
+            <!-- <img src="img/Avatar2.png">  -->
             <h1>¡HOLA! SOY MARIANA</h1>
+            <!-- <img src="img/Avatar2.png"> -->
         </section>
         <div id="todo">
-            <div id="izquierda">
+            <div id="intro">
+                <img src="img/Avatar2.png">
                 <section id="about">
                     <h2>SOBRE MÍ</h2>
-                    <p>¡Hola! Soy una diseñadora gráfica y retocadora fotográfica con más de 10 años de experiencia en edición
-                        de
-                        imagen y producción visual. Especializada en retoque natural, corrección de color y composiciones
-                        realistas
-                        en Adobe Photoshop. Cuento con amplia experiencia en fotografía de retrato, logrando resultados
-                        consistentes
-                        y de alta calidad, con gran atención al detalle y coherencia visual. Actualmente también desarrollo mi
-                        perfil como ilustradora, con foco en estilos infantiles y juveniles, poniendo especial énfasis en el
-                        diseño
-                        de personajes, el color y la narrativa visual. Resido en Argentina y estoy disponible para proyectos
-                        remotos, tanto locales como internacionales.</p>
+                    <p>¡Hola! Soy una diseñadora gráfica y retocadora fotográfica con más de 10 años de experiencia en
+                        edición de imagen y producción visual. Especializada en retoque natural, corrección de color y
+                        composiciones realistas en Adobe Photoshop. Cuento con amplia experiencia en fotografía de
+                        retrato,
+                        logrando resultados consistentes y de alta calidad, con gran atención al detalle y coherencia
+                        visual. Actualmente también desarrollo mi perfil como ilustradora, con foco en estilos
+                        infantiles y
+                        juveniles, poniendo especial énfasis en el diseño de personajes, el color y la narrativa visual.
+                        Resido en Argentina y estoy disponible para proyectos remotos, tanto locales como
+                        internacionales.
+                    </p>
                 </section>
                 <section class="skills">
                     <h2>SKILLS</h2>
@@ -66,7 +73,7 @@
                     </ul>
                 </section>
             </div>
-            <div id="derecha">
+            <div id="expe">
                 <section>
                     <h2>FORMACIÓN</h2>
                     <div>
@@ -90,6 +97,7 @@
                         <h4>Tecnicatura en Producción Audiovisual</h4>
                         <p>2005 – 2009</p>
                     </div>
+                    <img src="img/Avatar2.png" alt="">
                 </section>
                 <section>
                     <h2>EXPERIENCIA</h2>
@@ -137,22 +145,58 @@
                         </ul>
                     </div>
                 </section>
-                </div>
+            </div>
+        </div>
+        <div id="trabajos">
+            <h2>ÚLTIMOS TRABAJOS</h2>
+            <article id="trabajitos">
+                <section>
+                    <a href="https://www.behance.net/gallery/239929277/Identidad-visual-Museo-del-bolud"
+                        target="_blank">
+                        <img src="img/Avatar.png" alt="museo del boludo">
+                        <p>+ver más</p>
+                    </a>
+                </section>
+                <section>
+                    <a href="https://www.behance.net/gallery/232267175/Expedientes-Extremos-Bookzine"
+                        target="_blank">
+                    <img src="img/Avatar.png" alt="expedientes extremos">
+                    <p>+ver más</p>
+                    </a>
+                </section>
+                <section>
+                    <a href="https://www.behance.net/gallery/232266921/Gomina-Fest-Programa-desplegable"
+                        target="_blank">
+                    <img src="img/Avatar.png" alt="gomina fest">
+                    <p>+ver más</p>
+                    </a>
+                </section>
+            </article>
+        </div>
+        <div id="trabajemos">
+            <p>¿No querés que trabajemos juntos?</p>
+        </div>
     </main>
     <footer>
-        <ul>
-            <li>
-                <a href="https://www.instagram.com/miss_choricienta/"><img src="img/Instagram_logo_2022.svg.png"></a>
-            </li>
-            <li>
-                <a href="https://www.behance.net/marianazaro"><img src="img/Behance-logo.png"></a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/mariana-zaro-garcea-4b5510160/"><img
-                        src="img/Linkedin-logo.png"></a>
-            </li>
-        </ul>
-        <p>Compu 3 UNLA 2026</p>
+        <img src="img/Avatar2.png" alt="">
+        <div id="cositos">
+            <ul>
+                <li>
+                    <a href="https://www.instagram.com/miss_choricienta/" target="_blank"><img
+                            src="img/Instagram_logo_2022.svg.png"></a>
+                </li>
+                <li>
+                    <a href="https://www.behance.net/marianazaro" target="_blank"><img src="img/Behance-logo.png"></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/mariana-zaro-garcea-4b5510160/" target="_blank"><img
+                            src="img/Linkedin-logo.png"></a>
+                </li>
+            </ul>
+            <h2>holamarianabanana@gmail.com</h2>
+            <p>Compu 3 UNLA 2026</p>
+        </div>
+        <img src="img/Avatar2.png" alt="">
     </footer>
 </body>
 
