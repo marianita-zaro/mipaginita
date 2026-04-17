@@ -1,8 +1,7 @@
-Hola profes
-! 
-Modifiqué la organización de la página, y agregué algunas cositas más.
-Para la preentrega me faltaría:
+¡Hola!
 
-- Las imágenes, las que están son provisorias
-- Cambiar las tipografías por otras que elegí
-- Hay algunas partes en el html que las desactivé con <!-- porque aún no decido si van a quedar o no.
+¡Bienvenidos a mi primer paginita!
+
+Esto es una página de presentación, que incluye un poco sobre mí, mi cv, algunos trabajos recientes, y mis redes sociales. Dí muchas vueltas, todavía está en proceso. Sigo dando muchas vueltas.
+
+Mi tamaño de pantalla es 1920x1080, y el editor que estoy usando es el VsCode.
