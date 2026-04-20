@@ -210,6 +210,14 @@ ul {
     padding: 30px 0px 30px 0px;
 }
 
+#trabajos p:hover {
+    color: rgb(255, 188, 43);
+}
+
+#trabajos p:active {
+    color: rgb(246, 130, 77);
+}
+
 #proyectos article {
     display: flex;
     flex-direction: column;
