@@ -1,6 +1,14 @@
 /* CSS Document */
 @charset "utf-8";
 
+:root {
+    --pseudoblanco: rgb(247, 243, 237);
+    --flynnpaff: rgb(255, 213, 223);
+    --banana: rgb(255, 188, 43);
+    --mandarina: rgb(246, 130, 77);
+    --pitufo: rgb(41, 72, 136);
+}
+
 /* configuraciones generales */
 
 * {
@@ -12,18 +20,21 @@
     box-sizing: border-box;
 }
 
+/*Es necesario que los paddings y margins sean exactamente los mismos de figma? Porque me pasa que algunas cosas me van gustando mejor con otras medidas una vez pasadas a código, y por ahí quedan un poco distintas, o tengo que volver a figma y cambiarlas?/*
+
+
 /*HEADER*/
 
 header {
-    background-color: rgb(247, 243, 237);
+    background-color: var(--pseudoblanco);
     padding-bottom: 70px;
 }
 
 header p {
-    font-size: 2.5rem;
-    color: rgb(255, 188, 43);
+    font-size: 2rem;
+    color: var(--banana);
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
     line-height: 2rem;
 }
@@ -32,107 +43,172 @@ header p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(41, 72, 136);
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 100;
+    background-color: var(--pitufo);
     padding: 10px 20px;
 }
 
-#barra img {
-    width: 32px;
-    height: 32px;
-}
+/*TENGO UN PROBLEMA: tengo el hero adentro de mi header, porque quiero que sea el mismo en todas las páginas, pero quiero que el navbar sea sticky, sólo el navbar, no el hero; entonces si le pongo el sticky al navbar, igual desaparece al irse el header en scroll, entonces se me ocurren dos: o lo dejo así fixed en vez de sticky (funciona), o le hago sticky al header completo, pero pasando el hero al body, y copypaste en todos los html. Cuál sería la mejor opción?*/
 
 nav {
     font-optical-sizing: auto;
-    font-weight: 700;
+    font-weight: 500;
     font-style: normal;
 }
 
 nav a {
-    padding: 10px;
-    color: rgb(247, 243, 237);
+    padding: 25px;
+    color: var(--pseudoblanco);
     line-height: 2.4rem;
 }
 
 nav a:hover {
-    color: rgb(255, 188, 43);
+    color: var(--banana);
 }
 
 nav a:active {
-    color: rgb(246, 130, 77);
+    color: var(--mandarina);
 }
 
 #hero {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 60px;
     padding-top: 30px;
 }
 
 #gif {
     width: 100%;
     height: auto;
-    max-width: 1080px;
+    max-width: 800px;
     min-width: 500px;
 }
+
 
 /*MAIN*/
 
 main {
-    background-color: rgb(255, 213, 223);
+    background-color: var(--pseudoblanco);
 }
 
 h1 {
-    color: rgb(247, 243, 237);
-    /* font-size: 2rem; */
+    color: var(--mandarina);
     font-family: "formiga", sans-serif;
-    font-weight: 600;
+    font-weight: 550;
     font-style: normal;
     text-align: center;
-    line-height: 2.6rem;
+    line-height: 2.7rem;
     padding: 20px;
 }
 
 h2 {
-    color: rgb(246, 130, 77);
-    font-size: 1.8rem;
+    color: var(--pitufo);
+    font-size: 1.7rem;
     font-family: "formiga", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 600;
+    font-weight: 450;
     font-style: normal;
     line-height: 3rem;
-    padding-bottom: 10px;
 }
 
 h3 {
-    color: rgb(41, 72, 136);
-    font-size: 1.2rem;
+    color: var(--pitufo);
+    font-size: 1.5rem;
     font-optical-sizing: auto;
-    font-weight: 800;
+    font-weight: 650;
     font-style: normal;
-    line-height: 1.8rem;
-    padding: 30px 0px 5px 0px;
+    line-height: 2.2rem;
     max-width: 400px;
+    padding: 10px 0px;
 }
 
-
 h4 {
-    color: rgb(41, 72, 136);
-    font-size: 1.2rem;
+    color: var(--pitufo);
+    font-size: 1.5rem;
     font-optical-sizing: auto;
-    font-weight: 600;
+    font-weight: 450;
     font-style: normal;
-    padding: 0px 0px 5px 0px;
+    padding: 10px 0px;
 }
 
 p {
     text-wrap-style: balance;
     line-height: 1.8rem;
     padding: 5px 0px 5px 0px;
-    color: rgb(41, 72, 136);
+    color: var(--pitufo);
 }
 
 ul {
     line-height: 1.8rem;
+    color: var(--pitufo);
+}
+
+#logo {
+    height: 32px;
+    width: 32px;
+    fill: var(--banana)
+}
+
+#logo:hover {
+    fill: var(--mandarina)
+}
+
+.marquesina {
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: var(--banana);
+    padding: 5px 0px;
+}
+
+.marquesina-contenido {
+    display: inline-block;
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.marquesina span {
+    color: var(--pseudoblanco);
+    font-size: 1.5rem;
+    font-family: "formiga", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+}
+
+#bienvenida {
+    padding: 75px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#carátulas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 75px;
+    padding-top: 50px;
+}
+
+.areas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 #intro {
@@ -140,7 +216,7 @@ ul {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: rgb(247, 243, 237);
+    background-color: var(--pseudoblanco);
     padding: 70px;
 }
 
@@ -154,6 +230,7 @@ ul {
     height: fit-content;
 }
 
+/* YA NO ESTÁ
 #cv {
     display: flex;
     flex-direction: row;
@@ -166,6 +243,104 @@ ul {
 #cv img {
     margin: 50px
 }
+    */
+
+details {
+    padding-top: 20px;
+    padding-bottom: 75px;
+}
+
+details[open] summary {
+    border-bottom-style: none;
+    margin-bottom: 10px;
+}
+
+summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0px;
+    border-bottom-style: solid;
+    border-radius: 1px;
+    border-bottom-color: var(--mandarina);
+    transition: margin 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    margin-bottom: -20px;
+    cursor: pointer;
+}
+
+summary img {
+    transition: 0.4s;
+}
+
+details[open] img {
+    transform: rotate(-180deg);
+}
+
+#desplegables {
+    padding: 0px 100px 100px 100px;
+    margin: 0px 100px;
+}
+
+#desplegables h2 {
+    color: var(--mandarina);
+}
+
+.fechas {
+    color: var(--mandarina);
+}
+
+.contenido {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 50px 0px;
+    border-bottom-style: solid;
+    border-radius: 1px;
+    border-bottom-color: var(--mandarina);
+}
+
+.contenido h3 {
+    display: inline;
+}
+
+#skills {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    border-bottom-style: solid;
+    border-radius: 1px;
+    border-bottom-color: var(--mandarina);
+}
+
+.tableros {
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    background-color: var(--flynnpaff);
+    gap: 50px;
+    padding: 50px;
+}
+
+.tableros ul {
+    color: var(--pitufo);
+    font-size: 1.5rem;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    line-height: 2.2rem;
+}
+
+.cuarenta {
+    width: 40%;
+}
+
+.veinte {
+    width: 20%;
+}
+
+/*ESTO YA NO ESTÁ
 
 .listado {
     display: flex;
@@ -181,13 +356,13 @@ ul {
 }
 
 #cv li {
-    color: rgb(41, 72, 136);
+    color: var(--pitufo);
 }
 
 .skills {
     border: 2px;
     border-style: dotted;
-    border-color: rgb(246, 130, 77);
+    border-color: var(--mandarina);
     border-radius: 20px;
     padding: 25px;
     margin: 15px;
@@ -197,11 +372,11 @@ ul {
 .skills ul li::before {
     content: "✔";
     margin-right: 0.5rem;
-    color: rgb(246, 130, 77);
+    color: var(--mandarina);
 }
 
 #trabajos {
-    background-color: rgb(247, 243, 237);
+    background-color: var(--pseudoblanco);
     padding: 30px;
     text-align: center;
 }
@@ -211,11 +386,11 @@ ul {
 }
 
 #trabajos p:hover {
-    color: rgb(255, 188, 43);
+    color: var(--banana);
 }
 
 #trabajos p:active {
-    color: rgb(246, 130, 77);
+    color: var(--mandarina);
 }
 
 #proyectos article {
@@ -231,36 +406,21 @@ ul {
     align-items: flex-start;
     flex-wrap: wrap;
 }
+*/
 
-#trabajemos {
-    background-color: rgb(41, 72, 136);
-    padding: 30px;
-    text-align: center;
-}
-
-#trabajemos p {
-    font-family: "formiga", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    line-height: 3rem;
-    font-size: 2.4rem;
-    color: rgb(246, 130, 77);
-}
 
 /*FOOTER*/
 
-footer {
+#footer {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     height: fit-content;
-    padding: 10px 0px 10px 0px;
-    background-color: rgb(255, 213, 223);
+    background-color: var(--flynnpaff);
 }
 
-footer ul {
+#footer ul {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -269,17 +429,32 @@ footer ul {
     gap: 10px;
 }
 
-footer p {
+#footer p {
     text-align: center;
     font-size: 0.8rem;
-    padding-top: 25px;
+    padding-top: 10px;
 }
 
-footer h2 {
+#footer h2 {
     font-family: "novel-sans-pro", sans-serif;
-    font-size: 2.5rem;
-    color: rgb(41, 72, 136);
-    padding: 15px 0px;
+    font-size: 2rem;
+    color: var(--pitufo);
+    padding: 10px 0px;
+}
+
+#trabajemos {
+    background-color: var(--pitufo);
+    padding: 15px;
+    text-align: center;
+}
+
+#trabajemos p {
+    font-family: "formiga", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.8rem;
+    color: var(--mandarina);
 }
 
 #redes {
@@ -289,13 +464,23 @@ footer h2 {
     justify-content: center;
     flex-wrap: wrap;
     height: fit-content;
-    padding: 25px;
+    padding: 30px 10px 20px 10px;
 }
 
-footer li {
-    padding: 0px 15px;
+.iconos {
+    height: 40px;
+    width: 40px;
+    fill: var(--pseudoblanco);
 }
 
-footer ul img {
+.iconos:hover {
+    fill: var(--banana)
+}
+
+#footer li {
+    padding: 0px 20px;
+}
+
+#footer ul img {
     min-width: 100%;
 }
