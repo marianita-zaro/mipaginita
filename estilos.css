@@ -115,7 +115,8 @@ h2 {
     line-height: 3rem;
 }
 
-h3 {
+h3,
+.etiquetas-form {
     color: var(--pitufo);
     font-size: 1.5rem;
     font-optical-sizing: auto;
@@ -145,6 +146,135 @@ p {
 ul {
     line-height: 1.8rem;
     color: var(--pitufo);
+}
+
+/*Acá en lo que es css del formulario siento que escribí un choclo ajaja traté de juntar las cosas que se repetían, pero sospecho que me quedaron cosas de más igual; el formulario en sí es simple, pero me resultó bastante complejo hacer que todo quede y se vea como yo quería!*/
+
+form {
+    width: 100%;
+    background-color: var(--mandarina);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 50px;
+    margin: 50px;
+}
+
+input {
+    background-color: var(--flynnpaff);
+    font-size: 1rem;
+    color: var(--pitufo);
+    border: none;
+    outline: none;
+    padding: 15px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+label {
+    display: flex;
+    font-family: "novel-sans-pro", sans-serif;
+    color: var(--pitufo);
+    gap: 10px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: var(--banana);
+    border: none;
+    outline: none;
+    box-shadow: none;
+    position: relative;
+    top: 4px;
+}
+
+input[type="radio"] {
+    transform: scale(1.4);
+}
+
+input[type="checkbox"] {
+    transform: scale(1.2);
+}
+
+input[type="submit"] {
+    font-family: "novel-sans-pro", sans-serif;
+    color: var(--pitufo);
+    font-size: 1.5rem;
+    font-optical-sizing: auto;
+    font-weight: 650;
+    font-style: normal;
+    line-height: 2.2rem;
+    background-color: var(--banana);
+    padding: 10px;
+    width: 30%;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--pitufo);
+    color: var(--pseudoblanco);
+    cursor: pointer;
+}
+
+textarea {
+    background-color: var(--flynnpaff);
+    font-size: 1rem;
+    color: var(--pitufo);
+    border: none;
+    padding: 15px;
+    width: 100%;
+    height: 150px;
+    resize: none;
+    outline: none;
+    box-shadow: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-family: "novel-sans-pro", sans-serif;
+    font-size: 1rem;
+    color: var(--mandarina);
+}
+
+#contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding-bottom: 75px;
+}
+
+#formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.etiquetas-form {
+    padding-bottom: 10px;
+}
+
+#enviar {
+    display: flex;
+    justify-content: end;
+}
+
+#radios {
+    display: flex;
+    justify-content: left;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+#checks {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 #logo {

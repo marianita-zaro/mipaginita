@@ -34,7 +34,41 @@
     </header>
 
     <main>
-        <img src="img/banana.png" alt="Ilustración banana" width="300px" height="256px">
+        <!--Hay exceso de divs acá??-->
+        <section id="contacto">
+            <img src="img/banana.png" alt="Ilustración de stickers" width="500px" height="427px">
+            <div id="formulario">
+                <h1>Un, dos, tres, probando</h1>
+                <form method="post" action="mailto:holamarianabanana@gmail.com?subject='paginita" target="_blank"
+                    enctype="text/plain">
+                    <label for="nombre" class="etiquetas-form">Nombre*</label>
+                    <input type="text" name="nombre" id="nombre" maxlength="30" placeholder="Bobby Goma" required>
+                    <label for="email" class="etiquetas-form">E-mail*</label>
+                    <input type="email" name="email" id="email" maxlength="100" placeholder="juancarlosbatman@gmail.com"
+                        required>
+                    <h3>Temática de tu proyecto</h3>
+                    <div id="checks">
+                        <label><input type="checkbox" name="temática" value="dinosaurios"
+                                id="dinosaurios">Dinosaurios</label>
+                        <label><input type="checkbox" name="temática" value="bricolage" id="bricolage">Bricolage</label>
+                        <label><input type="checkbox" name="temática" value="extraterrestres"
+                                id="extraterrestres">Extraterrestres</label>
+                        <label><input type="checkbox" name="temática" value="milanesas" id="milanesas">Milanesas</label>
+                    </div>
+                    <h3>¿Te gusta el chipá?</h3>
+                    <div id="radios">
+                        <label><input type="radio" name="chipá" value="obvio" id="obvio">Obvio</label>
+                        <label><input type="radio" name="chipá" value="re" id="re">Re</label>
+                    </div>
+                    <label for="mensaje" class="etiquetas-form">Mensaje*</label>
+                    <textarea name="mensaje" id="mensaje" placeholder="Hola Susana, te estamos llamando"
+                        required></textarea>
+                    <div id="enviar">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -71,7 +105,8 @@
                     </li>
                     <li>
                         <a href="https://www.linkedin.com/in/mariana-zaro-garcea-4b5510160/" target="_blank">
-                            <svg class="iconos" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 797.94 797.86">
+                            <svg class="iconos" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                viewBox="0 0 797.94 797.86">
                                 <path
                                     d="M560.84,0H243.7C106.83,0,0,106.82,0,240.36v317.14c0,133.53,106.83,240.36,240.36,240.36h317.14c133.54,0,240.36-106.83,240.36-240.36V240.36C801.2,106.82,694.37,0,560.84,0ZM243.11,667.35h-119.71v-360.16h119.71v360.16ZM183.28,258.03h-.01s-.77-.01-.77-.01c-40.18,0-66.16-27.65-66.16-62.22s26.76-62.23,67.73-62.23,66.15,26.89,66.93,62.24c0,34.56-25.98,62.22-67.72,62.22ZM674.79,667.35h-119.7v-192.65c0-48.42-17.34-81.45-60.64-81.45-33.08,0-52.78,22.27-61.43,43.79-3.16,7.68-3.94,18.45-3.94,29.2v201.11h-119.7v.02s1.56-326.38,0-360.17h119.71v50.98c15.92-24.53,44.4-59.43,107.89-59.43,78.76,0,137.81,51.48,137.81,162.1v206.5Z" />
                             </svg>
