@@ -170,6 +170,7 @@ input {
     width: 100%;
     height: auto;
     margin-bottom: 30px;
+    border: 2px solid transparent;
 }
 
 label {
@@ -228,6 +229,7 @@ textarea {
     resize: none;
     outline: none;
     box-shadow: none;
+    border: 2px solid transparent;
 }
 
 input::placeholder,
@@ -235,6 +237,11 @@ textarea::placeholder {
     font-family: "novel-sans-pro", sans-serif;
     font-size: 1rem;
     color: var(--mandarina);
+}
+
+input:focus,
+textarea:focus {
+    border: 2px solid var(--pitufo);
 }
 
 #contacto {
