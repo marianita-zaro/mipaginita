@@ -20,8 +20,9 @@
     box-sizing: border-box;
 }
 
-/*Es necesario que los paddings y margins sean exactamente los mismos de figma? Porque me pasa que algunas cosas me van gustando mejor con otras medidas una vez pasadas a código, y por ahí quedan un poco distintas, o tengo que volver a figma y cambiarlas?/*
+/*Es necesario que los paddings y margins sean exactamente los mismos de figma? Porque me pasa que algunas cosas me van gustando mejor con otras medidas una vez pasadas a código, y por ahí quedan un poco distintas, o tengo que volver a figma y cambiarlas?
 
+Otra cosa, como tengo los tamaños tipográficos en figma en puntos (creo) y en el código en rem, no coinciden exactamente, eso importa??*/
 
 /*HEADER*/
 
@@ -348,6 +349,14 @@ textarea:focus {
     padding: 20px;
 }
 
+.img-final {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    background-color: var(--flynnpaff);
+}
+
+
 #intro {
     display: flex;
     justify-content: center;
@@ -361,13 +370,7 @@ textarea:focus {
     margin: 0px 50px 0px 0px;
 }
 
-#p-about {
-    max-width: 475px;
-    text-align: left;
-    height: fit-content;
-}
-
-/* YA NO ESTÁ
+/*YA NO ESTÁ
 #cv {
     display: flex;
     flex-direction: row;
@@ -379,8 +382,15 @@ textarea:focus {
 
 #cv img {
     margin: 50px
+}*/
+
+/*ABOUT*/
+
+#p-about {
+    max-width: 475px;
+    text-align: left;
+    height: fit-content;
 }
-    */
 
 details {
     padding-top: 20px;
@@ -475,6 +485,63 @@ details[open] img {
 
 .veinte {
     width: 20%;
+}
+
+/*DISEÑO*/
+
+.titulo-galeria {
+    align-items: center;
+    background-color: var(--mandarina);
+}
+
+.titulo-galeria h1 {
+    color: var(--pseudoblanco);
+}
+
+.proyecto {
+    padding: 75px 0px;
+    background-color: var(--flynnpaff);
+}
+
+.descripcion {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 10px 60px;
+    background-image: url(design/flechita_título_carruseles.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.datos {
+    display: flex;
+    gap: 50px;
+}
+
+.p-bold {
+    font-weight: 800;
+    font-style: normal;
+}
+
+.swiper {
+    width: 100%;
+    height: auto;
+}
+
+.swiper-slide img {
+    width: 100%;
+    display: block;
+}
+
+.swiper-slide img,
+.swiper-slide video {
+    height: 600px;
+    display: block;
+}
+
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
+    color: var(--mandarina);
 }
 
 /*ESTO YA NO ESTÁ
