@@ -24,7 +24,7 @@
 
 Otra cosa, como tengo los tamaños tipográficos en figma en puntos (creo) y en el código en rem, no coinciden exactamente, eso importa??*/
 
-/*HEADER*/
+/* HEADER */
 
 header {
     background-color: var(--pseudoblanco);
@@ -90,7 +90,7 @@ nav a:active {
 }
 
 
-/*MAIN*/
+/* MAIN */
 
 main {
     background-color: var(--pseudoblanco);
@@ -149,7 +149,83 @@ ul {
     color: var(--pitufo);
 }
 
+/* INDEX */
+
+#logo {
+    height: 32px;
+    width: 32px;
+    fill: var(--banana)
+}
+
+#logo:hover {
+    fill: var(--mandarina)
+}
+
+.marquesina {
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: var(--banana);
+    padding: 5px 0px;
+}
+
+.marquesina-contenido {
+    display: inline-block;
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.marquesina span {
+    color: var(--pseudoblanco);
+    font-size: 1.5rem;
+    font-family: "formiga", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+}
+
+#bienvenida {
+    padding: 75px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#carátulas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 75px;
+    padding-top: 50px;
+}
+
+.areas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.img-final {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    background-color: var(--flynnpaff);
+}
+
 /*Acá en lo que es css del formulario siento que escribí un choclo ajaja traté de juntar las cosas que se repetían, pero sospecho que me quedaron cosas de más igual; el formulario en sí es simple, pero me resultó bastante complejo hacer que todo quede y se vea como yo quería!*/
+
+/* CONTACTO */
 
 form {
     width: 100%;
@@ -249,6 +325,7 @@ textarea:focus {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 25px;
     padding-bottom: 75px;
 }
@@ -285,92 +362,7 @@ textarea:focus {
     flex-wrap: wrap;
 }
 
-#logo {
-    height: 32px;
-    width: 32px;
-    fill: var(--banana)
-}
-
-#logo:hover {
-    fill: var(--mandarina)
-}
-
-.marquesina {
-    overflow: hidden;
-    white-space: nowrap;
-    background-color: var(--banana);
-    padding: 5px 0px;
-}
-
-.marquesina-contenido {
-    display: inline-block;
-    animation: scroll 20s linear infinite;
-}
-
-@keyframes scroll {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-50%);
-    }
-}
-
-.marquesina span {
-    color: var(--pseudoblanco);
-    font-size: 1.5rem;
-    font-family: "formiga", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    text-align: center;
-}
-
-#bienvenida {
-    padding: 75px 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#carátulas {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 75px;
-    padding-top: 50px;
-}
-
-.areas {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-
-.img-final {
-    display: flex;
-    justify-content: center;
-    padding-top: 50px;
-    background-color: var(--flynnpaff);
-}
-
-
-#intro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    background-color: var(--pseudoblanco);
-    padding: 70px;
-}
-
-#intro img {
-    margin: 0px 50px 0px 0px;
-}
-
-/*YA NO ESTÁ
+/*ESTO YA NO ESTÁ
 #cv {
     display: flex;
     flex-direction: row;
@@ -384,7 +376,20 @@ textarea:focus {
     margin: 50px
 }*/
 
-/*ABOUT*/
+/* ABOUT */
+
+#intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--pseudoblanco);
+    padding: 70px;
+}
+
+#intro img {
+    margin: 0px 50px 0px 0px;
+}
 
 #p-about {
     max-width: 475px;
@@ -455,6 +460,7 @@ details[open] img {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding-bottom: 50px;
     border-bottom-style: solid;
     border-radius: 1px;
@@ -468,6 +474,7 @@ details[open] img {
     background-color: var(--flynnpaff);
     gap: 50px;
     padding: 50px;
+    margin-bottom: 25px;
 }
 
 .tableros ul {
@@ -487,7 +494,7 @@ details[open] img {
     width: 20%;
 }
 
-/*DISEÑO*/
+/* DISEÑO */
 
 .titulo-galeria {
     align-items: center;
@@ -508,13 +515,12 @@ details[open] img {
     align-items: baseline;
     justify-content: space-between;
     padding: 10px 60px;
-    background-image: url(design/flechita_título_carruseles.svg);
-    background-repeat: no-repeat;
-    background-position: left center;
+    flex-wrap: wrap;
 }
 
 .datos {
     display: flex;
+    flex-wrap: wrap;
     gap: 50px;
 }
 
@@ -528,20 +534,30 @@ details[open] img {
     height: auto;
 }
 
-.swiper-slide img {
-    width: 100%;
-    display: block;
-}
-
 .swiper-slide img,
 .swiper-slide video {
-    height: 600px;
-    display: block;
+    width:100%;
+    height:auto;
+    display:block;
 }
 
 .swiper .swiper-button-next,
 .swiper .swiper-button-prev {
     color: var(--mandarina);
+}
+
+/* ILUS */
+
+#galeria {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 50px;
+}
+
+#galeria a {
+    padding: 15px;
 }
 
 /*ESTO YA NO ESTÁ
@@ -612,8 +628,7 @@ details[open] img {
 }
 */
 
-
-/*FOOTER*/
+/* FOOTER */
 
 #footer {
     display: flex;
