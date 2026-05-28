@@ -554,10 +554,22 @@ details[open] img {
     align-items: flex-start;
     justify-content: center;
     padding: 50px;
+    background-color: var(--flynnpaff);
 }
 
 #galeria a {
     padding: 15px;
+}
+
+#video{
+    display:flex;
+    justify-content:center;
+    background-color: var(--flynnpaff);
+}
+
+video{
+    height:600px;
+    width:auto;
 }
 
 /*ESTO YA NO ESTÁ
