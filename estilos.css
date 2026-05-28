@@ -216,11 +216,19 @@ ul {
     padding: 20px;
 }
 
-.img-final {
+.img-final-design,
+.img-final-about {
     display: flex;
     justify-content: center;
     padding-top: 50px;
+}
+
+.img-final-design {
     background-color: var(--flynnpaff);
+}
+
+.img-final-about {
+    background-color: var(--pseudoblanco);
 }
 
 /*Acá en lo que es css del formulario siento que escribí un choclo ajaja traté de juntar las cosas que se repetían, pero sospecho que me quedaron cosas de más igual; el formulario en sí es simple, pero me resultó bastante complejo hacer que todo quede y se vea como yo quería!*/
@@ -527,6 +535,11 @@ details[open] img {
 .p-bold {
     font-weight: 800;
     font-style: normal;
+    color: var(--mandarina);
+}
+
+.h4-naranja {
+    color: var(--mandarina);
 }
 
 .swiper {
@@ -570,6 +583,10 @@ details[open] img {
 video{
     height:600px;
     width:auto;
+}
+
+.fancybox-button path{
+    fill:var(--banana);
 }
 
 /*ESTO YA NO ESTÁ

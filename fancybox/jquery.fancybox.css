@@ -307,7 +307,7 @@ body.compensate-for-scrollbar {
 /* Buttons */
 
 .fancybox-button {
-    background: rgba(30, 30, 30, .6);
+    background: var(--pitufo);
     border: 0;
     border-radius: 0;
     box-shadow: none;
@@ -326,11 +326,11 @@ body.compensate-for-scrollbar {
 .fancybox-button,
 .fancybox-button:visited,
 .fancybox-button:link {
-    color: #ccc;
+    color: var(--banana);
 }
 
 .fancybox-button:hover {
-    color: #fff;
+    color: var(--banana);
 }
 
 .fancybox-button:focus {
@@ -343,7 +343,7 @@ body.compensate-for-scrollbar {
 
 .fancybox-button[disabled],
 .fancybox-button[disabled]:hover {
-    color: #888;
+    color:var(--mandarina);
     cursor: default;
     outline: none;
 }
