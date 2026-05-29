@@ -84,7 +84,7 @@ nav a:active {
     width: 100%;
     height: auto;
     max-width: 800px;
-    min-width: 500px;
+    min-width: 400px;
 }
 
 #logo {
@@ -190,7 +190,7 @@ ul {
     align-items: center;
 }
 
-#caratulas {
+#portadas {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -205,6 +205,11 @@ ul {
     align-items: center;
     justify-content: center;
     padding: 20px;
+}
+
+.imagen-centrada {
+    display: flex;
+    justify-content: center;
 }
 
 .img-final-design,
@@ -643,16 +648,11 @@ video {
         font-size: 1.4rem;
     }
 
-    #logo {
-    height: 40px;
-    width: 40px;
-}
-
     #bienvenida {
         padding: 30px 0px;
     }
 
-    #caratulas {
+    #portadas {
         gap: 20px;
         padding-top: 30px;
     }
@@ -666,12 +666,12 @@ video {
     }
 
     .iconos {
-        height: 54px;
-        width: 54px;
+        height: 48px;
+        width: 48px;
     }
 
     #footer li {
-        padding: 0px 30px;
+        padding: 0px 20px;
     }
 
     #footer p {
@@ -696,7 +696,7 @@ video {
     }
 
     #barra {
-        padding: 20px 10px;
+        padding: 10px 15px;
     }
 
     nav {
@@ -705,7 +705,29 @@ video {
 
     nav a {
         font-size: 0.9rem;
-        padding: 10px;
+        padding: 6px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    #bienvenida {
+        padding: 20px 0px;
+    }
+
+    #portadas {
+        gap: 0px;
+        padding-top: 10px;
+    }
+
+    .caratula {
+        width: 80%;
     }
 
     #trabajemos {
@@ -713,23 +735,30 @@ video {
     }
 
     #trabajemos p {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     #footer p {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
+        padding: 5px;
     }
 
     #footer h2 {
-        font-size: 1.9rem;
+        font-size: 1.4rem;
+        padding: 10px 0px;
     }
 
     #footer {
         padding-bottom: 25px;
     }
 
-    #hadita {
+    #hadita1 {
         display: none;
+    }
+
+    #hadita2 {
+        width: 32%;
+        height: auto;
     }
 
 }
