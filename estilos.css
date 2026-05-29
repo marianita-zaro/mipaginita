@@ -503,7 +503,7 @@ details[open] img {
 }
 
 .p-bold {
-    font-weight: 800;
+    font-weight: 700;
     color: var(--mandarina);
 }
 
@@ -556,6 +556,41 @@ video {
 
 .fancybox-button path {
     fill: var(--banana);
+}
+
+/* VOLVER */
+
+#volver-top {
+    position: fixed;
+    bottom: 70px;
+    right: 70px;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    width: 60px;
+    height: 60px;
+}
+
+#volver-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#volver-top #circulito {
+    fill: var(--banana);
+}
+
+#volver-top #flechita {
+    fill: var(--flynnpaff);
+}
+
+#volver-top:hover #circulito {
+    fill: var(--mandarina);
+}
+
+#volver-top:hover #flechita {
+    fill: var(--pitufo);
 }
 
 /* FOOTER */
@@ -668,10 +703,6 @@ video {
     .iconos {
         height: 48px;
         width: 48px;
-    }
-
-    #footer li {
-        padding: 0px 20px;
     }
 
     #footer p {
