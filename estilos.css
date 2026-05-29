@@ -13,6 +13,8 @@
 
 * {
     font-family: "novel-sans-pro", sans-serif;
+    font-style: normal;
+    font-optical-sizing: auto;
     list-style: none;
     text-decoration: none;
     margin: 0;
@@ -34,9 +36,7 @@ header {
 header p {
     font-size: 2rem;
     color: var(--banana);
-    font-optical-sizing: auto;
     font-weight: 500;
-    font-style: normal;
     line-height: 2rem;
 }
 
@@ -55,9 +55,7 @@ header p {
 /*TENGO UN PROBLEMA: tengo el hero adentro de mi header, porque quiero que sea el mismo en todas las páginas, pero quiero que el navbar sea sticky, sólo el navbar, no el hero; entonces si le pongo el sticky al navbar, igual desaparece al irse el header en scroll, entonces se me ocurren dos: o lo dejo así fixed en vez de sticky (funciona), o le hago sticky al header completo, pero pasando el hero al body, y copypaste en todos los html. Cuál sería la mejor opción?*/
 
 nav {
-    font-optical-sizing: auto;
     font-weight: 500;
-    font-style: normal;
 }
 
 nav a {
@@ -89,6 +87,17 @@ nav a:active {
     min-width: 500px;
 }
 
+#logo {
+    height: 32px;
+    width: 32px;
+    fill: var(--banana)
+}
+
+#logo:hover {
+    fill: var(--mandarina)
+}
+
+
 
 /* MAIN */
 
@@ -100,7 +109,6 @@ h1 {
     color: var(--mandarina);
     font-family: "formiga", sans-serif;
     font-weight: 550;
-    font-style: normal;
     text-align: center;
     line-height: 2.7rem;
     padding: 20px;
@@ -110,9 +118,7 @@ h2 {
     color: var(--pitufo);
     font-size: 1.7rem;
     font-family: "formiga", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 450;
-    font-style: normal;
     line-height: 3rem;
 }
 
@@ -120,9 +126,7 @@ h3,
 .etiquetas-form {
     color: var(--pitufo);
     font-size: 1.5rem;
-    font-optical-sizing: auto;
     font-weight: 650;
-    font-style: normal;
     line-height: 2.2rem;
     max-width: 400px;
     padding: 10px 0px;
@@ -131,9 +135,7 @@ h3,
 h4 {
     color: var(--pitufo);
     font-size: 1.5rem;
-    font-optical-sizing: auto;
     font-weight: 450;
-    font-style: normal;
     padding: 10px 0px;
 }
 
@@ -150,16 +152,6 @@ ul {
 }
 
 /* INDEX */
-
-#logo {
-    height: 32px;
-    width: 32px;
-    fill: var(--banana)
-}
-
-#logo:hover {
-    fill: var(--mandarina)
-}
 
 .marquesina {
     overflow: hidden;
@@ -188,7 +180,6 @@ ul {
     font-size: 1.5rem;
     font-family: "formiga", sans-serif;
     font-weight: 600;
-    font-style: normal;
     text-align: center;
 }
 
@@ -199,7 +190,7 @@ ul {
     align-items: center;
 }
 
-#carátulas {
+#caratulas {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -245,7 +236,8 @@ form {
     margin: 50px;
 }
 
-input {
+input,
+textarea {
     background-color: var(--flynnpaff);
     font-size: 1rem;
     color: var(--pitufo);
@@ -253,9 +245,14 @@ input {
     outline: none;
     padding: 15px;
     width: 100%;
-    height: auto;
     margin-bottom: 30px;
     border: 2px solid transparent;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+    box-shadow: none;
 }
 
 label {
@@ -287,9 +284,7 @@ input[type="submit"] {
     font-family: "novel-sans-pro", sans-serif;
     color: var(--pitufo);
     font-size: 1.5rem;
-    font-optical-sizing: auto;
     font-weight: 650;
-    font-style: normal;
     line-height: 2.2rem;
     background-color: var(--banana);
     padding: 10px;
@@ -301,20 +296,6 @@ input[type="submit"]:hover {
     background-color: var(--pitufo);
     color: var(--pseudoblanco);
     cursor: pointer;
-}
-
-textarea {
-    background-color: var(--flynnpaff);
-    font-size: 1rem;
-    color: var(--pitufo);
-    border: none;
-    padding: 15px;
-    width: 100%;
-    height: 150px;
-    resize: none;
-    outline: none;
-    box-shadow: none;
-    border: 2px solid transparent;
 }
 
 input::placeholder,
@@ -369,20 +350,6 @@ textarea:focus {
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
-/*ESTO YA NO ESTÁ
-#cv {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    padding: 30px;
-}
-
-#cv img {
-    margin: 50px
-}*/
 
 /* ABOUT */
 
@@ -488,9 +455,7 @@ details[open] img {
 .tableros ul {
     color: var(--pitufo);
     font-size: 1.5rem;
-    font-optical-sizing: auto;
     font-weight: 450;
-    font-style: normal;
     line-height: 2.2rem;
 }
 
@@ -534,7 +499,6 @@ details[open] img {
 
 .p-bold {
     font-weight: 800;
-    font-style: normal;
     color: var(--mandarina);
 }
 
@@ -549,9 +513,9 @@ details[open] img {
 
 .swiper-slide img,
 .swiper-slide video {
-    width:100%;
-    height:auto;
-    display:block;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .swiper .swiper-button-next,
@@ -574,88 +538,20 @@ details[open] img {
     padding: 15px;
 }
 
-#video{
-    display:flex;
-    justify-content:center;
+#video {
+    display: flex;
+    justify-content: center;
     background-color: var(--flynnpaff);
 }
 
-video{
-    height:600px;
-    width:auto;
+video {
+    height: 600px;
+    width: auto;
 }
 
-.fancybox-button path{
-    fill:var(--banana);
+.fancybox-button path {
+    fill: var(--banana);
 }
-
-/*ESTO YA NO ESTÁ
-
-.listado {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 10px;
-    margin: 30px;
-}
-
-.tablero {
-    margin-top: 75px;
-}
-
-#cv li {
-    color: var(--pitufo);
-}
-
-.skills {
-    border: 2px;
-    border-style: dotted;
-    border-color: var(--mandarina);
-    border-radius: 20px;
-    padding: 25px;
-    margin: 15px;
-    min-width: 270px;
-}
-
-.skills ul li::before {
-    content: "✔";
-    margin-right: 0.5rem;
-    color: var(--mandarina);
-}
-
-#trabajos {
-    background-color: var(--pseudoblanco);
-    padding: 30px;
-    text-align: center;
-}
-
-#trabajos h2 {
-    padding: 30px 0px 30px 0px;
-}
-
-#trabajos p:hover {
-    color: var(--banana);
-}
-
-#trabajos p:active {
-    color: var(--mandarina);
-}
-
-#proyectos article {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#proyectos {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
-*/
 
 /* FOOTER */
 
@@ -698,9 +594,7 @@ video{
 
 #trabajemos p {
     font-family: "formiga", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 500;
-    font-style: normal;
     font-size: 1.8rem;
     color: var(--mandarina);
 }
@@ -729,6 +623,113 @@ video{
     padding: 0px 20px;
 }
 
-#footer ul img {
-    min-width: 100%;
+/* RESPONSIVE - SÓLO INDEX */
+
+@media screen and (max-width: 900px) {
+
+    header {
+        padding-bottom: 50px;
+    }
+
+    header p {
+        font-size: 2.2rem;
+    }
+
+    #barra {
+        padding: 15px 25px;
+    }
+
+    nav a {
+        font-size: 1.4rem;
+    }
+
+    #logo {
+    height: 40px;
+    width: 40px;
+}
+
+    #bienvenida {
+        padding: 30px 0px;
+    }
+
+    #caratulas {
+        gap: 20px;
+        padding-top: 30px;
+    }
+
+    #trabajemos {
+        padding: 20px;
+    }
+
+    #trabajemos p {
+        font-size: 2rem;
+    }
+
+    .iconos {
+        height: 54px;
+        width: 54px;
+    }
+
+    #footer li {
+        padding: 0px 30px;
+    }
+
+    #footer p {
+        font-size: 1.4rem;
+    }
+
+    #footer h2 {
+        font-size: 2.3rem;
+        padding: 15px 0px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    header {
+        padding-bottom: 30px;
+    }
+
+    header p {
+        font-size: 1.4rem;
+    }
+
+    #barra {
+        padding: 20px 10px;
+    }
+
+    nav {
+        font-weight: 700;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    #trabajemos {
+        padding: 5px;
+    }
+
+    #trabajemos p {
+        font-size: 1.4rem;
+    }
+
+    #footer p {
+        font-size: 1.1rem;
+    }
+
+    #footer h2 {
+        font-size: 1.9rem;
+    }
+
+    #footer {
+        padding-bottom: 25px;
+    }
+
+    #hadita {
+        display: none;
+    }
+
 }

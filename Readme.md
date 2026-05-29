@@ -1,7 +1,9 @@
 ¡Hola!
 
-¡Bienvenidos a mi primer paginita!
+¡Bienvenidos al portfolio de Mariana Banana!
 
-Esto es una página de presentación, que incluye un poco sobre mí, mi cv, algunos trabajos recientes, y mis redes sociales. Dí muchas vueltas, todavía está en proceso. Sigo dando muchas vueltas.
+Partiendo de una página simple, fui agregando páginas nuevas: bienvenida, acerca de mí, formulario de contacto, y dos galerías simples con algo de js.
 
 Mi tamaño de pantalla es 1920x1080, y el editor que estoy usando es el VsCode.
+
+El index es responsive; el resto de las páginas no lo son, pero igualmente funcionan de forma más o menos decente en formatos de pantalla más pequeños.
